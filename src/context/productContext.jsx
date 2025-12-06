@@ -11,7 +11,7 @@ const token = localStorage.getItem('token')
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:3002/product/",   {
+        const res = await axios.get("https://backendoctoweb.onrender.com/product/",   {
           headers: { "x-auth-token": token }, // ✅ lowercase headers
         });
         setproducts(res.data);
@@ -24,7 +24,7 @@ const token = localStorage.getItem('token')
   }, []);
 const Delete=async(id)=>{
   try{
-  await axios.delete(`http://localhost:3002/product/${id}`,   {
+  await axios.delete(`https://backendoctoweb.onrender.com/product/${id}`,   {
           headers: { "x-auth-token": token }, // ✅ lowercase headers
         })
   
