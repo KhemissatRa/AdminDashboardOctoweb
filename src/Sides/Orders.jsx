@@ -49,11 +49,11 @@ export default function Orders() {
                 <td className="truncate max-w-[120px]">
                   {order.order.map((item, i) => (
                     <div key={i}>
-                      {i + 1}: {item.toUpperCase()}
+                      {i + 1}: {item.title.toUpperCase() }
+                      <span>Qauntity:</span>{item.quantity}
                     </div>
                   ))}
                 </td>
-
                 <td className="truncate max-w-[120px]">{order.name}</td>
                 <td className="truncate max-w-[100px]">{order.Number}</td>
                 <td className="truncate max-w-[150px]">{order.email}</td>

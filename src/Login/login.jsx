@@ -16,7 +16,7 @@ export default function Login() {
     setMessage("");
 
     try {
-      const response = await axios.post("https://backendoctoweb.onrender.com/admin/login", {
+      const response = await axios.post("https://backendoctoweb.onrender.com/api/admin/admin/login", {
         email,
         password,
       });
@@ -40,9 +40,13 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen text-black flex items-center justify-center bg-gray-50 p-4 sm:p-6">
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 sm:p-10 transition-all duration-300 hover:shadow-3xl">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center mb-6">
+    <div className="min-h-screen text-black flex flex-col items-center justify-center bg-slate-950 p-4 sm:p-6">
+     <div className="pb-14 m-0">
+     <h3 className="text-white font-medium mb-1">Email : admin@email.com</h3>
+     <h3 className="text-white font-medium mb-1">Password : admin633</h3>
+</div>
+     <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 sm:p-10 transition-all duration-300 hover:shadow-3xl">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 text-center mb-6">
           Admin Login
         </h1>
 
