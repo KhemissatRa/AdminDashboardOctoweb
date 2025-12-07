@@ -22,7 +22,7 @@ export default function Orders() {
 
       {/* Table Container */}
       <div className="overflow-x-auto w-full text-black border-4 border-blue-600 rounded-lg bg-white text-black">
-        <table className="table min-w-full">
+        <table className="table bg-white min-w-full">
 
           {/* Head */}
           <thead className="text-black">
