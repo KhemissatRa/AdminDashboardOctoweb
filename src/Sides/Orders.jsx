@@ -2,7 +2,11 @@ import { useContext } from "react";
 import OrderContext from "../context/orderContext";
 
 export default function Orders() {
-  const { orders, Delete, updt } = useContext(OrderContext);
+
+  const ctx = useContext(OrderContext);
+  const orders = Array.isArray(ctx.orders) ? ctx.orders : [];
+  const Delete = ctx.Delete;
+  const updt = ctx.updt;
 
   return (
     <div className="flex flex-col m-4 min-h-full space-y-8 justify-center text-center max-w-full items-center">
@@ -51,29 +55,33 @@ export default function Orders() {
             {/* Orders */}
             {orders.map((order, index) => (
               <tr
-                key={order._id}
+                key={order._id || index}
                 className={`transition-colors duration-300 ${
                   order.Done ? "bg-green-200 text-black" : "bg-base-100"
                 }`}
               >
                 <td>{index + 1}</td>
 
-                {/* Orders List */}
+                {/* Order Items */}
                 <td className="max-w-[220px] whitespace-normal">
 
-                  {order.order?.length === 0 && (
+                  {Array.isArray(order.order) && order.order.length === 0 && (
                     <p className="text-gray-500 italic">No items</p>
                   )}
 
-                  {order.order?.map((item, i) => (
-                    <div key={i} className="text-sm border-b last:border-b-0 py-1">
-                      <strong>
-                        {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
-                      </strong>
-                      <br />
-                      <span className="text-gray-700">Quantity:</span> {item.quantity ?? 0}
-                    </div>
-                  ))}
+                  {Array.isArray(order.order) &&
+                    order.order.map((item, i) => (
+                      <div key={i} className="text-sm border-b last:border-b-0 py-1">
+                        <strong>
+                          {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
+                        </strong>
+                        <br />
+                        <span className="text-gray-700">
+                          Quantity:
+                        </span> {item.quantity ?? 0}
+                      </div>
+                    ))
+                  }
 
                 </td>
 
@@ -82,13 +90,11 @@ export default function Orders() {
                 <td className="truncate max-w-[150px]">{order.email}</td>
                 <td className="truncate max-w-[100px]">{order.willaya}</td>
                 <td className="truncate max-w-[100px]">{order.city}</td>
-
                 <td>{order.totalPrice?.toFixed(2) ?? "0.00"} $</td>
 
                 {/* Delete */}
                 <td>
                   <button
-                    aria-label="Delete order"
                     onClick={() => Delete(order._id)}
                     className="btn btn-error btn-sm"
                   >
