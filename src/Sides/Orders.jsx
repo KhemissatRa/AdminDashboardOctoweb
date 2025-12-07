@@ -38,7 +38,7 @@ export default function Orders() {
           <tbody>
             {orders.map((order, index) => (
               <tr
-                key={order._id || index}
+                key={order._id}
                 className={`transition-colors duration-300 ${
                   order.Done ? "bg-green-200 text-black" : "bg-base-100"
                 }`}
@@ -50,7 +50,7 @@ export default function Orders() {
                   {order.order.map((item, i) => (
                     <div key={i}>
                       {i + 1}: {item.title.toUpperCase() }
-                      <span>Qauntity:</span>{item.quantity}
+                    <span className="font-semibold ml-2">Quantity:</span> {item.quantity}
                     </div>
                   ))}
                 </td>
