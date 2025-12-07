@@ -46,14 +46,21 @@ export default function Orders() {
                 <td>{index + 1}</td>
 
                 {/* Orders List */}
-                <td className="truncate max-w-[120px]">
-                  {order.order.map((item, i) => (
-                    <div key={i}>
-                      {i + 1}: {item.title.toUpperCase() }
-                    <span className="font-semibold ml-2">Quantity:</span> {item.quantity}
-                    </div>
-                  ))}
-                </td>
+               <td className="max-w-[200px] whitespace-normal">
+                  
+<td className="max-w-[220px] whitespace-normal">
+  {order.order?.map((item, i) => (
+    <div key={i} className="text-sm border-b last:border-b-0 py-1">
+      <strong>
+        {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
+      </strong>
+      <br />
+      <span className="text-gray-700">Quantity:</span> {item.quantity ?? 0}
+    </div>
+  ))}
+</td>
+
+
                 <td className="truncate max-w-[120px]">{order.name}</td>
                 <td className="truncate max-w-[100px]">{order.Number}</td>
                 <td className="truncate max-w-[150px]">{order.email}</td>
