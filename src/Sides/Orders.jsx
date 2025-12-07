@@ -57,7 +57,7 @@ export default function Orders() {
               <tr
                 key={order._id || index}
                 className={`transition-colors  duration-300 ${
-                  order.Done ? "bg-green-200 text-black" : "bg-base-100"
+                  order.Done ? "bg-green-200 text-black" : "bg-white"
                 }`}
               >
                 <td>{index + 1}</td>
