@@ -56,7 +56,7 @@ export default function Orders() {
             {orders.map((order, index) => (
               <tr
                 key={order._id || index}
-                className={`transition-colors duration-300 ${
+                className={`transition-colors  duration-300 ${
                   order.Done ? "bg-green-200 text-black" : "bg-base-100"
                 }`}
               >
@@ -66,12 +66,12 @@ export default function Orders() {
                 <td className="max-w-[220px] whitespace-normal">
 
                   {Array.isArray(order.order) && order.order.length === 0 && (
-                    <p className="text-gray-500 italic">No items</p>
+                    <p className="text-white italic">No items</p>
                   )}
 
                   {Array.isArray(order.order) &&
                     order.order.map((item, i) => (
-                      <div key={i} className="text-sm border-b last:border-b-0 py-1">
+                      <div key={i} className="text-sm text-white border-b last:border-b-0 py-1">
                         <strong>
                           {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
                         </strong>
