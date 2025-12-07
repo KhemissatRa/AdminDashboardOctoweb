@@ -42,8 +42,7 @@ export default function Login() {
   return (
     <div className="min-h-screen text-black flex flex-col items-center justify-center bg-slate-950 p-4 sm:p-6">
      <div className="pb-14 m-0">
-     <h3 className="text-white font-medium mb-1">Email : admin@email.com</h3>
-     <h3 className="text-white font-medium mb-1">Password : admin633</h3>
+
 </div>
      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 sm:p-10 transition-all duration-300 hover:shadow-3xl">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 text-center mb-6">
