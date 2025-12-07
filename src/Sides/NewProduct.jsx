@@ -18,7 +18,7 @@ export default function NewProduct() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-black p-4 sm:p-6">
-      <div className="w-full max-w-lg sm:max-w-md bg-base-100 rounded-2xl shadow-2xl border-4 border-blue-600 p-6 sm:p-8">
+      <div className="w-full max-w-lg sm:max-w-md bg-slate-950 rounded-2xl shadow-2xl border-4 border-blue-600 p-6 sm:p-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-center text-white mb-6">
           Create New Product
         </h1>
@@ -33,7 +33,7 @@ export default function NewProduct() {
           {/* Title */}
           <div>
             <label className="label">
-              <span className="label-text text-white text-base sm:text-lg font-semibold">
+              <span className="label-text text-white text-gray-200 sm:text-lg font-semibold">
                 Product Title
               </span>
             </label>
@@ -50,7 +50,7 @@ export default function NewProduct() {
           {/* Description */}
           <div>
             <label className="label">
-              <span className="label-text text-white text-base sm:text-lg font-semibold">
+              <span className="label-text text-white text-gray-200 sm:text-lg font-semibold">
                 Description
               </span>
             </label>
@@ -66,7 +66,7 @@ export default function NewProduct() {
           {/* Price */}
           <div>
             <label className="label">
-              <span className="label-text text-white text-base sm:text-lg font-semibold">
+              <span className="label-text text-white text-gray-200 sm:text-lg font-semibold">
                 Price ($)
               </span>
             </label>
@@ -85,7 +85,7 @@ export default function NewProduct() {
           {/* Image Upload */}
           <div>
             <label className="label">
-              <span className="label-text text-white text-base sm:text-lg font-semibold">
+              <span className="label-text text-white text-gray-200 sm:text-lg font-semibold">
                 Product Image
               </span>
             </label>
@@ -102,7 +102,7 @@ export default function NewProduct() {
           {/* Category */}
           <div>
             <label className="label">
-              <span className="label-text text-white text-base sm:text-lg font-semibold">
+              <span className="label-text text-white text-gray-200 sm:text-lg font-semibold">
                 Category
               </span>
             </label>
