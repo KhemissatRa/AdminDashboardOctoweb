@@ -71,7 +71,7 @@ export default function Orders() {
 
                   {Array.isArray(order.order) &&
                     order.order.map((item, i) => (
-                      <div key={i} className="text-sm text-white border-b last:border-b-0 py-1">
+                      <div key={i} className="text-sm text-black border-b last:border-b-0 py-1">
                         <strong>
                           {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
                         </strong>
