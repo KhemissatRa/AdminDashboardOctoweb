@@ -21,7 +21,7 @@ export default function Orders() {
       </div>
 
       {/* Table Container */}
-      <div className="overflow-x-auto w-full border-4 border-blue-600 rounded-lg bg-white text-black">
+      <div className="overflow-x-auto w-full text-black border-4 border-blue-600 rounded-lg bg-white text-black">
         <table className="table min-w-full">
 
           {/* Head */}
@@ -76,7 +76,7 @@ export default function Orders() {
                           {i + 1}. {item.title?.toUpperCase() || "NO TITLE"}
                         </strong>
                         <br />
-                        <span className="text-gray-700">
+                        <span className="text-black">
                           Quantity:
                         </span> {item.quantity ?? 0}
                       </div>
