@@ -11,8 +11,7 @@ export default function Products() {
       <div className="card bg-base-200 shadow-xl border-4 border-blue-600 rounded-lg w-full max-w-7xl">
         <div className="card-body">
           <h1 className="card-title text-4xl font-extrabold text-white">
-            Product List
-          </h1>
+المنتجات          </h1>
         </div>
       </div>
 
@@ -23,12 +22,12 @@ export default function Products() {
           <thead className="text-black">
             <tr>
               <th>#</th>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Price</th>
-              <th>Actions</th>
-              <th>Status</th>
+              <th>الصورة</th>
+              <th>الاسم</th>
+              <th>الفئة</th>
+              <th>التمن</th>
+              <th>الفعل</th>
+              <th>الحالة</th>
             </tr>
           </thead>
 
@@ -49,9 +48,7 @@ export default function Products() {
                     Delete
                   </button>
                 </td>
-                <td>
-                  <button className="btn btn-primary btn-sm">Done</button>
-                </td>
+                
               </tr>
             ))}
           </tbody>

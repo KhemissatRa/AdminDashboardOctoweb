@@ -28,15 +28,15 @@ export default function Orders() {
           <thead className="text-black">
             <tr>
               <th>#</th>
-              <th>Order</th>
-              <th>Name</th>
-              <th>Number</th>
-              <th>Email</th>
-              <th>Wilaya</th>
-              <th>City</th>
-              <th>Total $</th>
-              <th>Delete</th>
-              <th>Status</th>
+              <th>الطلبية</th>
+              <th>اسم المشتري</th>
+              <th>الرقم</th>
+              <th>البريد</th>
+              <th>الولاية</th>
+              <th>المدينة</th>
+              <th>المجموع</th>
+              <th>مسح</th>
+              <th>الحالة</th>
             </tr>
           </thead>
 
@@ -47,7 +47,7 @@ export default function Orders() {
             {orders.length === 0 && (
               <tr>
                 <td colSpan="10" className="text-center font-bold py-6">
-                  No Orders Found 🛒
+                  لا يوجذ طلبيات🛒
                 </td>
               </tr>
             )}
@@ -66,7 +66,7 @@ export default function Orders() {
                 <td className="max-w-[220px] whitespace-normal">
 
                   {Array.isArray(order.order) && order.order.length === 0 && (
-                    <p className="text-white italic">No items</p>
+                    <p className="text-white italic">لا منتج</p>
                   )}
 
                   {Array.isArray(order.order) &&
@@ -86,11 +86,11 @@ export default function Orders() {
                 </td>
 
                 <td className="truncate max-w-[120px]">{order.name}</td>
-                <td className="truncate max-w-[100px]">{order.Number}</td>
+                <td className="truncate max-w-[150px]">{order.Number}</td>
                 <td className="truncate max-w-[150px]">{order.email}</td>
                 <td className="truncate max-w-[100px]">{order.willaya}</td>
                 <td className="truncate max-w-[100px]">{order.city}</td>
-                <td>{order.totalPrice?.toFixed(2) ?? "0.00"} $</td>
+                <td>{order.totalPrice?.toFixed(2) ?? "0.00"} DZD</td>
 
                 {/* Delete */}
                 <td>
@@ -98,20 +98,19 @@ export default function Orders() {
                     onClick={() => Delete(order._id)}
                     className="btn btn-error btn-sm"
                   >
-                    Delete
-                  </button>
+مسح                  </button>
                 </td>
 
                 {/* Status */}
                 <td>
                   {order.Done ? (
-                    <span className="badge badge-success">Completed</span>
+                    <span className="badge badge-success">تم</span>
                   ) : (
                     <button
                       onClick={() => updt(order._id)}
                       className="btn btn-primary btn-sm"
                     >
-                      Done
+                      اكد الطلبية
                     </button>
                   )}
                 </td>

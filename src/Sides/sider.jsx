@@ -38,13 +38,14 @@ export default function Sider() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to="/create">Create Product</Link>
+              <Link to="/create">اضف منتج</Link>
             </li>
             <li>
-              <Link to="/product">See Products ...</Link>
+              <Link to="/product">
+            المنتجات </Link>
             </li>
             <li>
-              <Link to="/orders">See Orders ..</Link>
+              <Link to="/orders">الطلبيات</Link>
             </li>
           </ul>
         </div>
