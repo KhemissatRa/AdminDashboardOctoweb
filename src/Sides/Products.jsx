@@ -20,9 +20,14 @@ export default function Products() {
       {/* Header Card */}
       <div className="card bg-base-200 shadow-xl border-4 border-blue-600 rounded-lg w-full max-w-7xl">
         <div className="card-body">
+<<<<<<< HEAD
           <h1 className="card-title text-4xl font-extrabold text-white justify-center">
             المنتجات
           </h1>
+=======
+          <h1 className="card-title text-4xl font-extrabold text-black">
+المنتجات          </h1>
+>>>>>>> edfc73d09b3c41fd99716609055a45927e417554
         </div>
       </div>
 

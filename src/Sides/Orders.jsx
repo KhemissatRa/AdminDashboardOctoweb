@@ -32,8 +32,13 @@ export default function Orders() {
       {/* Header Card */}
       <div className="card bg-base-200 shadow-xl border-4 border-blue-600 rounded-lg w-full max-w-7xl">
         <div className="card-body">
+<<<<<<< HEAD
           <h1 className="card-title justify-center text-4xl font-extrabold text-white">
             قائمة الطلبيات
+=======
+          <h1 className="card-title text-center text-4xl font-extrabold text-black">
+            Order List
+>>>>>>> edfc73d09b3c41fd99716609055a45927e417554
           </h1>
         </div>
       </div>
