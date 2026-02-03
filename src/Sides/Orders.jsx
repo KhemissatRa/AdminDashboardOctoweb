@@ -48,7 +48,6 @@ export default function Orders() {
               <th className="text-center">الطلبية</th>
               <th className="text-center">اسم المشتري</th>
               <th className="text-center">الرقم</th>
-              <th className="text-center">البريد</th>
               <th className="text-center">الولاية</th>
               <th className="text-center">المدينة</th>
               <th className="text-center">المجموع</th>
@@ -110,9 +109,7 @@ export default function Orders() {
                 </td>
                 <td className="text-center" dir="ltr">{order.Number}</td>
                 <td className="text-center">
-                  <div className="truncate max-w-[150px]" title={order.email}>
-                    {order.email}
-                  </div>
+                  
                 </td>
                 <td className="text-center">{order.willaya}</td>
                 <td className="text-center">{order.city}</td>
